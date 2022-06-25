@@ -1,0 +1,54 @@
+.modal {
+    position: fixed;
+    height: 50vh;
+    top: 25vh;
+    width: 50%;
+    left: 25%;
+    z-index: 100;
+    background-color: var(--baby-blue);
+    /* overflow: hidden; */
+  }
+  
+  .card {
+    /* Could have been added in modal and thereby past all the way to card as one class but for the exercise
+      I'm splitting it into two classes. That caused me to change how I add these extraClasses in Card.js
+      before I used [...props.extraClasses] but it doesn't work with multiple classes. New solution: 
+      props.extraClasses.join(' ') to join the strings of the array with a whitespace as delimiter (instead of the default comma)*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card h1 {
+    color: pink;
+  }
+  
+  .modal h1 {
+    color: green;
+  }
+  
+  .card p {
+    color: var(--navy-blue);
+    font-size: 0.75rem;
+    margin: 2rem auto 0;
+  }
+
+
+  .card span {
+    color: var(--blue-grotto);
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    text-decoration: underline;
+    
+  }
+  
+  /* .card p button {
+    color: var(--navy-blue);
+    background: transparent;
+    font-size: 0.75rem;
+  
+    margin-left: 1rem;
+  } */
+  

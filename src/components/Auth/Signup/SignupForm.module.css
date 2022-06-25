@@ -1,0 +1,11 @@
+.form {
+  color: var(--blue-grotto);
+  display: flex;
+  flex-direction: column;
+}
+
+.invalid input {
+  /* background-color: pink; */
+  border: 0.1rem solid red;
+}
+

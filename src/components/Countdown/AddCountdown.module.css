@@ -1,0 +1,59 @@
+.card {
+  display: flex;
+  padding: 2rem 4rem;
+  margin: 2rem 10rem;
+}
+
+.form {
+  max-width: 60rem;
+  margin: auto;
+  padding: 10px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form label,
+.form input {
+  padding: 1rem;
+  font-size: 1.25rem;
+  border-radius: 1rem 0;
+}
+
+.form label {
+  background: var(--blue-green);
+  /* height: 2rem; */
+}
+
+.form input {
+  background: rgba(255, 255, 255, 0.3);
+  border: 3px dotted #ffb1b1;
+  color: #ffb1b1;
+  caret-color: rgb(255, 255, 168);
+}
+
+.form input::placeholder {
+  color: rgb(255, 177, 177);
+}
+
+.form button {
+  grid-column: 1 / 3;
+  width: 15rem;
+  margin: auto;
+}
+
+.form button:disabled {
+  background-color: rgb(250, 22, 22);
+  /* background: grey; */
+  cursor: not-allowed;
+}
+
+.invalid input {
+  border: 2px solid #b40e0e;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.invalid p {
+  color: red;
+}

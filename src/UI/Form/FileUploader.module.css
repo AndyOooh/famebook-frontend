@@ -1,0 +1,22 @@
+.filepicker-label {
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+  
+    /* from index.css button - should make this a class */
+    font: inherit;
+    color: white;
+    background: var(--navy-blue);
+    padding: 0.5rem 2rem;
+    margin: 0.5rem;
+    border-radius: 1rem;
+    font-weight: 900;
+    /*to avoid the browser defalut: inset  */
+    border-style: solid;
+    cursor: pointer;
+  }
+  
+  .file-picker {
+    /* visibility: hidden; */
+    display: none;
+  }

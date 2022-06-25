@@ -1,0 +1,51 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem;
+  margin: 2rem 10rem;
+
+  /* justify-content: center; */
+  /* align-content: center; */
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.card span {
+  font-size: 1rem;
+}
+
+.timer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 0 1rem;
+}
+
+.wrapper-left {
+  text-align: center;
+  position: relative;
+  font-size: 3rem;
+}
+
+.wrapper {
+  text-align: center;
+  position: relative;
+  font-size: 3rem;
+}
+
+.wrapper::after {
+  content: ':';
+  position: absolute;
+  top: 2.5rem;
+  display: block;
+  margin: 0 -1rem;
+}
+
+.number {
+  margin: 1rem 0;
+}
+
+.letter {
+  margin: 1rem 2rem;
+  font-size: 1rem;
+  border-top: 2px solid black;
+}

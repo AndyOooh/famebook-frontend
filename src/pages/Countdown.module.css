@@ -1,0 +1,8 @@
+.countdownapp-wrapper {
+    min-height: var(--page-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+

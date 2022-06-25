@@ -1,0 +1,21 @@
+.active {
+    color: white;
+    text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* color: var(--baby-blue) */
+  }
+  
+  li {
+    padding: 0 1rem;
+    text-decoration: none;
+  }
+  
+  
+  

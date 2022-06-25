@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  /* border for development */
+  /* border: 1px solid orange; */
+}
+
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  margin: 0;
+
+  --navy-blue: rgb(5, 68, 94);
+  --blue-grotto: #189ab4;
+  --blue-green: rgb(117, 230, 218);
+  --baby-blue: rgb(212, 241, 244);
+
+  --header-height: 4rem;
+  --page-height: calc(100vh - (2 * var(--header-height)));
+}
+
+.container {
+  /* padding: 0 3rem;  */
+  max-width: 65rem;
+  margin: auto;
+}
+
+button {
+  font: inherit;
+  color: white;
+  background: var(--navy-blue);
+  padding: 0.5rem 2rem;
+  margin: 0.5rem;
+  border-radius: 1rem;
+  font-weight: 900;
+  /*to avoid the browser default: inset  */
+  border-style: solid; 
+
+  /* border-color: white; */
+  /* text-shadow: 0.05rem 0.05rem 0.025rem rgba(0, 0, 0, 0.5); */
+  /* cursor: url('./assets/icons8-hand-cursor-24.png'), crosshair; */
+}
+
+button:hover {
+  /* background: var(--main-purple); */
+  /* color: var(--main-pink); */
+}
+
+ul {
+  list-style: none;
+}

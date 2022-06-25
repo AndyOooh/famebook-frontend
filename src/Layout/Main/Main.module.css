@@ -1,0 +1,11 @@
+.main {
+  /* min-height: calc(100vh - (2 * var(--header-height))); */
+  min-height: var(--page-height);
+  margin-top: var(--header-height);
+  background-color: var(--baby-blue);
+
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+}

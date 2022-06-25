@@ -1,0 +1,35 @@
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  background-color: var(--navy-blue);
+  box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+  font-size: 1rem;
+}
+
+/* .header a {
+  color: var(--baby-blue)
+} */
+
+.logo {
+  height: 100%;
+}
+
+.logo img {
+  height: 100%;
+}
+
+/* move from Navigation.module.css to fit in Profile <a> */
+.header a {
+  text-decoration: none;
+  /* color: inherit; */
+  color: var(--baby-blue);
+}
