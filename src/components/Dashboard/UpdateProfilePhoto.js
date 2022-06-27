@@ -2,8 +2,8 @@ import { useState, useRef, useContext } from 'react';
 
 import AuthCtx from '../../store/auth-context';
 import Modal from '../../UI/Modal/Modal';
-import FileUploader from '../../UI/Form/FileUploader copy';
-import classes from './updateProfilePhoto.module.css';
+import FileUploader from '../../UI/Form/FileUploader/FileUploader';
+import classes from './UpdateProfilePhoto.module.css';
 
 const UpdateProfilePhoto = props => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -14,7 +14,7 @@ const UpdateProfilePhoto = props => {
     event.preventDefault();
 
     const formData = new FormData();
-    const modal = props.modalIsCover ? 'cover-image' : 'profile-image'
+    const modal = props.modalIsCover ? 'cover-image' : 'profile-image';
     formData.append(modal, selectedFile);
 
     // log formData
@@ -33,7 +33,7 @@ const UpdateProfilePhoto = props => {
       });
       const data = await response.json();
       console.log('data', data.data); // just logging response data for now
-      props.updateUser()
+      props.updateUser();
     } catch (error) {
       console.log('error', error);
     }
@@ -47,17 +47,18 @@ const UpdateProfilePhoto = props => {
   return (
     <>
       <Modal styles={[classes.modal, classes.card]} hideModal={() => props.hideModal()}>
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} className={classes['image-form']}>
           <div className={classes['image-buttons']}>
+            
             <FileUploader
               onFileSelectSuccess={onFileSelectSuccess}
               onFileSelectError={onFileSelectError}
             />
             {/* TODO create component for webcam, see VideoApp */}
-            <button>Take photo with webcam</button>
+            <button>Use webcam</button>
           </div>
           {/* TODO style p tag (maybe look into shitespace in temp lit) */}
-          {selectedFile && <p>{`Chosen photo:  ${selectedFile.name}       poij`}</p>}
+          {selectedFile && <p>{`Choose this photo:  ${selectedFile.name}       poij`}</p>}
           <button type='submit'>Update photo</button>
         </form>
       </Modal>

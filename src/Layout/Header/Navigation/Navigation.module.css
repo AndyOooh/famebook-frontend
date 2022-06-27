@@ -9,11 +9,14 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 3rem;
+  font-size: 1.5rem;
+  font-weight: 300;
   /* color: var(--baby-blue) */
   }
   
   li {
-    padding: 0 1rem;
+    /* padding: 0 1rem; */
     text-decoration: none;
   }
   

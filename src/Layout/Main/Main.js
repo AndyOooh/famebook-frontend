@@ -4,10 +4,10 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import classes from './Main.module.css';
 
 import AuthCtx from '../../store/auth-context';
-import Home from '../../pages/Home';
-import Countdown from '../../pages/Countdown';
-import UserProfile from '../../pages/UserProfile';
-import EditProfile from '../../pages/EditProfile';
+import Home from '../../pages/Home/Home';
+import Countdown from '../../pages/Countdown/Countdown';
+import UserProfile from '../../pages/Profile/UserProfile';
+import EditProfile from '../../pages/Profile/EditProfile';
 
 const Main = () => {
   const authCtx = useContext(AuthCtx);

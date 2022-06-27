@@ -1,0 +1,14 @@
+.button {
+  font: inherit;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  background-color: var(--pink);
+  border: 1px solid var(--hot-pink);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.file-picker {
+  display: none;
+}

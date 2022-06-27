@@ -1,0 +1,132 @@
+.page-wrapper {
+  min-height: var(--page-height);
+}
+
+.cover {
+  width: 100%;
+  height: 25rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.edit-cover-button {
+  padding: 0.25rem 1rem;
+  font-size: 0.8rem;
+
+  position: relative;
+  bottom: 1rem;
+  right: 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.camera-logo-cover {
+  font-size: 1.5rem;
+}
+
+.profile-details {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, auto) 1fr;
+  gap: 1rem;
+  padding: 1.5rem;
+
+  justify-content: space-between;
+  align-content: space-between;
+  /* position: relative; */
+  padding-bottom: 2rem;
+
+  overflow-wrap: break-word;
+}
+
+/* the 90% width horizontal line */
+.profile-details:after {
+  content: '';
+  background: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  height: 0.05rem;
+  width: 90%;
+}
+
+.profile-photo-wrapper {
+  display: flex;
+  align-items: flex-end;
+  aspect-ratio: 1/1;
+
+  position: relative;
+  bottom: 4.5rem;
+  width: 10rem;
+  height: 10rem;
+}
+
+.profile-photo {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border: 0.25rem solid pink;
+}
+
+.change-photo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  min-width: 2.25rem;
+  font-size: 1.125rem;
+  right: 2.5rem;
+  bottom: 0.5rem;
+  border-radius: 50%;
+  padding: 0.25rem;
+
+  background-color: pink;
+  border: 1px solid hotpink;
+}
+
+.user-data {
+  border: 1px solid maroon;
+  background-color: royalblue;
+  padding: 0 2rem;
+}
+
+.edit-profile-button {
+  font-size: 0.8rem;
+}
+
+/* ---------------------------------- MEDIA QUERIES (MEDIUM DEVICES) -------------------- */
+
+@media screen and (max-width: 1024px) {
+  .profile-details {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    margin-top: -6rem;
+  }
+
+  .user-data {
+    display: grid;
+    /* grid-template-columns: minmax(0, 1fr); */
+  }
+
+  .user-data p {
+    overflow: hidden;
+  }
+
+
+  .profile-photo-wrapper {
+    position: static;
+  }
+}
+
+/* ---------------------------------- MEDIA QUERIES (SMALL DEVICES) -------------------- */
+
+@media screen and (max-width: 600px) {
+}

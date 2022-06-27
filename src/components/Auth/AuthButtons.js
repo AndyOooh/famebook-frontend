@@ -36,14 +36,13 @@ const AuthButtons = () => {
           {!isLogin && <SignupForm onSwitch={switchFormHandler} />}
         </Modal>
       )}
-      <div>
-        <button type='button' onClick={showLoginHandler}>
-          Log In
-        </button>
-        <button type='button' onClick={showSignupHandler}>
-          Sign Up
-        </button>
-      </div>
+
+      <button type='button' onClick={showLoginHandler}>
+        Log In
+      </button>
+      <button type='button' onClick={showSignupHandler}>
+        Sign Up
+      </button>
     </>
   );
 };

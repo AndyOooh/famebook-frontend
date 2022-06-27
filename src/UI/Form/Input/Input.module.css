@@ -21,3 +21,17 @@
 /* .invalid {
   border: solid 1px red;
 } */
+
+/* ---------------------------------- MEDIA QUERIES (MEDIUM DEVICES) -------------------- */
+
+@media screen and (max-width: 1024px) {
+  .input {
+    flex-direction: column;
+  }
+}
+
+/* ---------------------------------- MEDIA QUERIES (SMALL DEVICES) -------------------- */
+
+@media screen and (max-width: 600px) {
+  
+}

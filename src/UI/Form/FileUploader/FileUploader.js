@@ -17,7 +17,7 @@ const FileUploader = props => {
   };
 
   return (
-    <label className={classes['filepicker-label']} htmlFor='file'>
+    <label className={classes.button} htmlFor='file'>
       Choose image from file
       <input
         className={classes['file-picker']}

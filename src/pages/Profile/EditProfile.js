@@ -1,6 +1,6 @@
 import classes from './EditProfile.module.css';
-import Input from '../UI/Form/Input/Input';
-import VideoApp from './VideoApp';
+import Input from '../../UI/Form/Input/Input';
+import VideoApp from '../../components/Dashboard/VideoApp';
 
 const EditProfile = () => {
   return (

@@ -87,6 +87,7 @@ const SignupForm = props => {
     emailReset();
     passwordReset();
     confPasswordReset();
+    console.log('isLoading', isLoading)
   };
 
   const nameInputClasses = nameHasError ? classes.invalid : '';

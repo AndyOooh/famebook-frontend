@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 
 import classes from './Countdown.module.css';
 
-import AddCountdown from '../components/Countdown/AddCountdown';
-import Counter from '../components/Countdown/Counter';
+import AddCountdown from '../../components/Countdown/AddCountdown';
+import Counter from '../../components/Countdown/Counter';
 
 const Countdown = props => {
   const [event, setEvent] = useState({

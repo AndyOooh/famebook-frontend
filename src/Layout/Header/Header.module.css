@@ -1,5 +1,6 @@
 .header-wrapper {
   position: fixed;
+  padding: 0 0.75rem;
   top: 0;
   width: 100%;
   z-index: 20;
@@ -8,23 +9,22 @@
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 3rem;
   align-items: center;
   height: var(--header-height);
-  font-size: 1rem;
+  /* font-size: 1.5rem; */
+  /* color: var(--white); */
+  
 }
 
-/* .header a {
-  color: var(--baby-blue)
-} */
-
-.logo {
-  height: 100%;
-}
-
-.logo img {
-  height: 100%;
+.header-home-logo {
+  font-size: 3rem;
+  aspect-ratio: 1/1;
+  width: 2rem;
+  /* font-weight: 500; */
+  color: var(--baby-blue);
 }
 
 /* move from Navigation.module.css to fit in Profile <a> */
@@ -32,4 +32,33 @@
   text-decoration: none;
   /* color: inherit; */
   color: var(--baby-blue);
+}
+
+.header-left {
+  display: flex;
+  gap: 2rem;
+}
+
+.burger {
+  display: none;
+  font-size: 2rem;
+  color: var(--baby-blue);
+}
+
+
+/* ---------------------------------- MEDIA QUERIES (MEDIUM DEVICES) -------------------- */
+
+@media screen and (max-width: 1024px) {
+}
+
+/* ---------------------------------- MEDIA QUERIES (SMALL DEVICES) -------------------- */
+
+@media screen and (max-width: 700px) {
+  .nav {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+  }
 }

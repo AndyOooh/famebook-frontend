@@ -60,6 +60,7 @@ const LoginForm = props => {
     setIsLoading(false); // should it go in catch block and after if-blocks inside try?
     emailReset();
     passwordReset();
+    console.log('isLoading', isLoading)
   };
 
   const emailInputClasses = emailHasError ? classes.invalid : '';
