@@ -55,7 +55,7 @@ const SignupForm = props => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:8080/auth/signup', {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/signup`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ const SignupForm = props => {
     emailReset();
     passwordReset();
     confPasswordReset();
-    console.log('isLoading', isLoading)
+    console.log('isLoading', isLoading);
   };
 
   const nameInputClasses = nameHasError ? classes.invalid : '';
