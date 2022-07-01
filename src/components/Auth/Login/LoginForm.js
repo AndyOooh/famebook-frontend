@@ -83,7 +83,7 @@ const LoginForm = props => {
       extraClasses: [passwordInputClasses],
       input: {
         id: 'password',
-        // type: 'password',
+        type: 'password',
         value: enteredPassword,
         placeholder: 'Min. 3 characters',
         onChange: passwordInputHandler,
