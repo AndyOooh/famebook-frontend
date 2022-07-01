@@ -9,3 +9,14 @@
   border: 0.1rem solid red;
 }
 
+.success {
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: var(--baby-blue);
+}
+
+.success span {
+  color: var(--hot-pink);
+  font-weight: 600;
+  text-decoration: none;
+}

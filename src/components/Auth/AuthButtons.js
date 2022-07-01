@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
+import classes from './AuthButtons.module.css';
 import Modal from '../../UI/Modal/Modal';
 import LoginForm from './Login/LoginForm';
 import SignupForm from './Signup/SignupForm';
 
-import classes from './AuthButtons.module.css';
 
 const AuthButtons = () => {
   const [showModal, setShowModal] = useState(false);

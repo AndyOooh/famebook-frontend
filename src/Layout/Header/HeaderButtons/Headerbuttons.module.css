@@ -4,3 +4,11 @@
   gap: 1rem;
   align-items: center;
 }
+
+.logout {
+  color: var(--pink);
+}
+
+.logout:hover {
+  cursor: pointer;
+}

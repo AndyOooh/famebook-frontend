@@ -4,7 +4,7 @@ const ProfileButtons = props => {
   return (
     <>
       <NavLink to={'/users/' + props.user}>Profile</NavLink>
-      <div onClick={props.onLogout} style={{ color: 'pink' }}>
+      <div className={props.logout} onClick={props.onLogout}>
         Log Out
       </div>
     </>

@@ -63,12 +63,6 @@ const UserProfile = () => {
     ? `${process.env.REACT_APP_BACKEND_URL}/${user.profileImageUrl}`
     : uploadImage;
 
-  // const coverClasses = user.coverPhotoUrl ? `${classes.cover} ${classes['cover-photo']}` : `${classes.cover}`
-
-  // const coverPhotoUrl = user.coverPhotoUrl
-  //   ? user.coverPhotoUrl
-  //   : '/src/assets/static/Spin-1.8s-143px.svg';
-
   return (
     <div className={classes['page-wrapper']}>
       {showChangePhoto && (
@@ -87,7 +81,7 @@ const UserProfile = () => {
         }}
       >
         <button className={classes['edit-cover-button']} onClick={coverModalHandler}>
-          <BsCameraFill className={classes['camera-logo-cover']} /> Edit cover photo
+          <BsCameraFill className={classes['camera-logo-cover']} /> Change cover photo
         </button>
       </div>
 
@@ -99,23 +93,18 @@ const UserProfile = () => {
           </div>
         </div>
         <div className={classes['user-data']}>
-          <h3>{user.username}</h3>
-          <p> Email: {user.email}</p>
-          <p> Id: {user._id}</p>
-          <p> Password: {user.password}</p>
+          <h2>{user.username}</h2>
+          <p>666 Friends</p>
+          <p>15 Groups</p>
         </div>
-        <NavLink to='/users/edit'>
-          <button className={`${classes['.edit-profile-button']} button`}>Edit Profile</button>
-        </NavLink>
-        <NavLink to='/users/edit'>
-          <button className={`${classes['.edit-profile-button']} button`}>Edit Profile</button>
-        </NavLink>{' '}
-        <NavLink to='/users/edit'>
-          <button className={`${classes['.edit-profile-button']} button`}>Edit Profile</button>
-        </NavLink>{' '}
-        <NavLink to='/users/edit'>
-          <button className={`${classes['.edit-profile-button']} button`}>Edit Profile</button>
-        </NavLink>
+        <div className={classes['edit-addstory-buttons']}>
+          <NavLink to='/users/edit'>
+            <button className={`${classes['.edit-profile-button']} button`}>Add to story</button>
+          </NavLink>
+          <NavLink to='/users/edit'>
+            <button className={`${classes['.edit-profile-button']} button`}>Edit Profile</button>
+          </NavLink>
+        </div>
       </div>
     </div>
   );

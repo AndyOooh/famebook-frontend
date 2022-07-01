@@ -6,6 +6,7 @@
 
 html {
   font-family: 'Noto Sans JP', sans-serif;
+  -webkit-appearance: none;
 }
 
 body {
@@ -23,6 +24,12 @@ body {
   background: linear-gradient(to right, var(--navy-blue), var(--blue-grotto));
 
   /* display: flex; */
+  color: var(--baby-blue);
+}
+
+body a {
+  /* otherwise overwritten by webkit */
+  color: var(--baby-blue);
 }
 
 .container {

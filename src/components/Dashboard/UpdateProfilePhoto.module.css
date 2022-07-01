@@ -1,5 +1,6 @@
 .card {
   background-color: var(--baby-blue);
+  color: var(--navy-blue);
 }
 
 .image-form {

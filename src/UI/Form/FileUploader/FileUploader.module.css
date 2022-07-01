@@ -7,6 +7,7 @@
   border: 1px solid var(--hot-pink);
   cursor: pointer;
   white-space: nowrap;
+  color: black;
 }
 
 .file-picker {

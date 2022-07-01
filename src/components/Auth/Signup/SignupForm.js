@@ -8,6 +8,8 @@ import classes from './SignupForm.module.css';
 const SignupForm = props => {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [signedUp, setSignedUp] = useState(false);
+  const [newUser, setNewUser] = useState({});
 
   const {
     value: enteredName,
@@ -51,7 +53,6 @@ const SignupForm = props => {
 
   const signupHandler = async event => {
     event.preventDefault();
-
     setIsLoading(true);
 
     try {
@@ -71,12 +72,13 @@ const SignupForm = props => {
 
       if (response.ok) {
         console.log('json response in signup', data);
-        return;
+        setNewUser({ ...data.data });
 
         // TODO: send verification email, unshow spinner, render success message: 'Successfully created user: <username>, an email has been sent to <email>'. Please verify your account by clicking the link.
+      } else {
+        const error = new Error(data.message);
+        throw error;
       }
-      const error = new Error(data.message);
-      throw error;
     } catch (error) {
       // TODO force error (wrong url e.g.) to see which error is logged and how we can use that for user feedback
       console.log(error);
@@ -88,6 +90,7 @@ const SignupForm = props => {
     passwordReset();
     confPasswordReset();
     console.log('isLoading', isLoading);
+    setSignedUp(true);
   };
 
   const nameInputClasses = nameHasError ? classes.invalid : '';
@@ -144,7 +147,7 @@ const SignupForm = props => {
   return (
     <form className={classes.form} onSubmit={signupHandler}>
       {isLoading && <LoaderSpinner />}
-      {!isLoading && (
+      {!isLoading && !signedUp && (
         <>
           {inputElements}
           <button type='submit' disabled={!formIsValid}>
@@ -154,7 +157,15 @@ const SignupForm = props => {
             Already have an account?
             <span onClick={props.onSwitch}>Log In</span>
           </p>
+          {!isLoading && error && <p className={classes.error}>{error}</p>}
         </>
+      )}
+      {signedUp && (
+        <h6 className={classes.success}>
+          Successfully created user: <span>{newUser.username} </span> <br /> 
+          An email has been sent to <span>{newUser.email}</span> . You can now log in.
+          {/* Please verify your account by clicking the link. */}
+        </h6>
       )}
     </form>
   );

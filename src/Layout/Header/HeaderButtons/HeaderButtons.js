@@ -11,7 +11,7 @@ const HeaderButtons = () => {
   return (
     <div className={classes['header-buttons']}>
       {!authCtx.isLoggedIn && <AuthButtons />}
-      {authCtx.isLoggedIn && <ProfileButtons onLogout={authCtx.logout} user={authCtx.userId} />}
+      {authCtx.isLoggedIn && <ProfileButtons logout={classes.logout} onLogout={authCtx.logout} user={authCtx.userId} />}
     </div>
   );
 };
