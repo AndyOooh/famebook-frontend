@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import { AiOutlineHome, AiOutlineShop } from 'react-icons/ai';
-import { MdOndemandVideo, MdOutlineGroups } from 'react-icons/md';
+import { MdOndemandVideo, MdOutlineGroups, MdRssFeed } from 'react-icons/md';
 
 import AuthCtx from '../../../store/auth-context';
 import classes from './Navigation.module.css';
@@ -21,6 +21,11 @@ const Navigation = () => {
         <li>
           <NavLink to='/countdown' className={navData => (navData.isActive ? classes.active : '')}>
             <MdOndemandVideo />
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to='/countdown' className={navData => (navData.isActive ? classes.active : '')}>
+            <MdRssFeed />
           </NavLink>
         </li>
         {authCtx.isLoggedIn && (
