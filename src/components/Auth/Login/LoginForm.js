@@ -31,7 +31,7 @@ const LoginForm = props => {
     reset: passwordReset,
   } = useInput(value => value.trim().length > 2);
 
-  const formIsValid = emailIsValid && passwordIsValid;
+  const formIsValid = emailIsValid && passwordIsValid; //should be inside the useEffect. Cany be sure to get latest state (emailIsValid, passwordIsValid) here.
 
   // SUBMITHANDLER --------------
   const loginHandler = async event => {
